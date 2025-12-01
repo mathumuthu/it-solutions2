@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | IT Solutions</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body{
+            background: #0a0f24;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container{
+            max-width: 600px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .glow{
+            font-size: 130px;
+            font-weight: 800;
+            color: #4f9cff;
+            text-shadow: 0 0 20px #4f9cff, 0 0 50px #4f9cff;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse{
+            0%{ text-shadow: 0 0 25px #4f9cff; }
+            50%{ text-shadow: 0 0 60px #4f9cff; }
+            100%{ text-shadow: 0 0 25px #4f9cff; }
+        }
+
+        h2{
+            font-size: 28px;
+            margin-top: 10px;
+        }
+
+        p{
+            color: #c8d5ff;
+            margin: 15px 0 25px;
+            line-height: 1.6;
+        }
+
+        .btn{
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            background: linear-gradient(45deg, #4f9cff, #7f5cff);
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .btn:hover{
+            background: linear-gradient(45deg, #7f5cff, #4f9cff);
+            transform: scale(1.05);
+        }
+
+        /* Floating animation */
+        .floating{
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float{
+            0%{ transform: translateY(0); }
+            50%{ transform: translateY(-15px); }
+            100%{ transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media (max-width: 500px){
+            .glow{
+                font-size: 90px;
+            }
+            h2{
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container floating">
+        <div class="glow">404</div>
+        <h2>Oops! Page Not Found</h2>
+        <p>The page you’re looking for might have been removed, renamed, or is temporarily unavailable.</p>
+
+        <a href="index.html" class="btn">Back To Home</a>
+    </div>
+
+    <script>
+        // Optional small animation effect
+        document.addEventListener("mousemove", (e) => {
+            const container = document.querySelector(".container");
+            container.style.transform = `translate(${e.clientX / 50}px, ${e.clientY / 50}px)`;
+        });
+    </script>
+
+</body>
+</html>

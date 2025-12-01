@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="net.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  
+</head>
+<body>
+  
+
+
+
+
+ <div class="topbar">
+    <header class="header">
+      <div class="logo">
+        <img src="logo .webp" alt="STACKLY Logo" />
+        <h2>STACKLY</h2>
+      </div>
+      <div class="contact">
+        <div class="contact1">
+          <!-- <p class="phone"><a href="./404.html">+91 12345 67890</a></p> -->
+          <!-- <p class="email"><a href="./404.html">info@stackly.com</a></p> -->
+        </div>
+        <!-- <div class="time">
+          <p class="hours">Mon-Fri: 9 am-6 pm</p>
+        </div> -->
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+    </header>
+
+    <nav class="navBar">
+      <div class="navLinks">
+        <ul class="linkRight">
+          <li class="dropdown">
+            <a href="./home page2.html">Home ▼</a>
+            <ul class="dropdown-menu">
+              <li><a href="./index.html">Home page 1</a></li>
+            </ul>
+          </li>
+          <li><a href="./cyber.html"> Cyber Sequrity</a></li>
+          <li><a href="./cloud.html">Cloud </a></li>
+          <!-- <li><a href="./safety.html">support</a></li> -->
+          <!-- <li><a href="./trips.html">Learn</a></li> -->
+           <li><a href="./net.html">Networking</a></li> 
+         <!-- <li><a href="./dashboard.html">Dashboard</a></li> -->
+
+          <li><a href="./login.html">Log In</a></li>
+          <li class="sign"><button onclick="window.location.href='./contact2.html'">Contact Us → </button></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- BODY SECTION START -->
+
+<!-- HERO / INTRO -->
+<section class="hero-body" style="background: linear-gradient(rgba(28,37,51,0.7), rgba(28,37,51,0.7)), url('https://images.unsplash.com/photo-1581093458296-c7b6f5d815e3?auto=format&fit=crop&w=1470&q=80') no-repeat center/cover; height:60vh; display:flex; align-items:center; justify-content:center; color:#fff; text-align:center;">
+  <div>
+    <h2 style="font-size:42px; margin-bottom:15px; animation: slideDown 1s;">Next-Gen IT Networking</h2>
+    <p style="font-size:20px; animation: fadeIn 1.5s;">Connecting Your Business Securely and Efficiently</p>
+  </div>
+</section>
+
+<!-- FEATURES / SERVICES -->
+<section class="features" style="padding:60px 0; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:25px; width:90%; margin:auto;">
+  <div class="card" style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1); text-align:center; transition:0.3s;">
+    <i class="fas fa-network-wired" style="font-size:45px; color:#1c2533; margin-bottom:15px;"></i>
+    <h3>Network Installation</h3>
+    <p>Full network design and installation tailored for your business.</p>
+  </div>
+  <div class="card" style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1); text-align:center; transition:0.3s;">
+    <i class="fas fa-shield-alt" style="font-size:45px; color:#1c2533; margin-bottom:15px;"></i>
+    <h3>Security Solutions</h3>
+    <p>Advanced cybersecurity solutions to protect your digital assets.</p>
+  </div>
+  <div class="card" style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1); text-align:center; transition:0.3s;">
+    <i class="fas fa-server" style="font-size:45px; color:#1c2533; margin-bottom:15px;"></i>
+    <h3>Server Setup</h3>
+    <p>Reliable server configuration and maintenance for smooth operations.</p>
+  </div>
+  <div class="card" style="background:#fff; padding:25px; border-radius:12px; box-shadow:0 6px 15px rgba(0,0,0,0.1); text-align:center; transition:0.3s;">
+    <i class="fas fa-wifi" style="font-size:45px; color:#1c2533; margin-bottom:15px;"></i>
+    <h3>Wireless Connectivity</h3>
+    <p>Secure and high-speed Wi-Fi deployment for offices and campuses.</p>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<!-- <section class="contact" style="background:#1c2533; color:#fff; padding:60px 0;">
+  <div style="width:90%; margin:auto; display:flex; flex-wrap:wrap; gap:30px;">
+    <form id="contactFormBody" style="flex:1; min-width:280px; display:flex; flex-direction:column; gap:15px;">
+      <input type="text" id="name" placeholder="Name" required style="padding:12px; border-radius:6px; border:none;">
+      <input type="email" id="email" placeholder="Email" required style="padding:12px; border-radius:6px; border:none;">
+      <textarea rows="5" id="message" placeholder="Message" required style="padding:12px; border-radius:6px; border:none;"></textarea>
+  <button type="submit" style="padding:12px; border:none; border-radius:6px; background:#4fa3f7; color:#fff; font-weight:bold; cursor:pointer; transition:0.3s;">Send</button>
+    </form>
+    <div style="flex:1; min-width:280px;">
+      <h3>Contact Info</h3>
+      <p>Email: contact@nettech.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: 456 Tech Park, Silicon City</p>
+    </div>
+  </div>
+</section> -->
+
+<!-- JS for validation -->
+<script>
+  const formBody = document.getElementById('contactFormBody');
+
+  formBody.addEventListener('submit', function(e){
+    e.preventDefault(); // Prevent page reload
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if(name === '' || email === '' || message === ''){
+      alert('Please fill all fields!');
+      return false;
+    } else {
+      alert('Message sent successfully!');
+      formBody.reset();
+    }
+  });
+</script>
+
+<!-- Animations -->
+<style>
+@keyframes slideDown { from { opacity:0; transform: translateY(-50px); } to { opacity:1; transform: translateY(0); } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+.features .card:hover { transform: translateY(-8px); box-shadow:0 12px 25px rgba(0,0,0,0.15); }
+</style>
+
+<!-- BODY SECTION END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<!-- ================= FOOTER SECTION ================= -->
+<footer class="it-footer">
+  <div class="footer-container">
+
+    <!-- Column 1 -->
+    <div class="footer-col">
+      <h2 class="footer-logo">
+        <i class="fa-solid fa-cde"></i> STACKLY
+      </h2>
+      <p class="footer-text">
+        We provide IT services, cloud solutions, UI/UX design, app development, 
+        cyber security, and technical support.
+      </p>
+
+      <div class="footer-social">
+        <a href="404error.html"><i class="fa-brands fa-facebook"></i></a>
+        <a href="404error.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404error.html"><i class="fa-brands fa-twitter"></i></a>
+        <a href="404error.html"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Service.html">Our Services</a></li>
+        <li><a href="About Us.html">About Us</a></li>
+        <li><a href="sucess.html">Sucess Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="footer-col">
+      <h3>IT Services</h3>
+      <ul>
+        <li><a href="404error.html">Web Development</a></li>
+        <li><a href="404error.html">App Development</a></li>
+        <li><a href="404error.html">Cloud Computing</a></li>
+        <li><a href="404error.html">Cyber Security</a></li>
+        <li><a href="404error.html">UI/UX & Branding</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 4 -->
+    <!-- <div class="footer-col">
+      <h3>Newsletter</h3>
+      <p>Subscribe to get the latest tech updates.</p>
+      <div class="newsletter-box">
+        <input type="email" placeholder="Enter your email" />
+        <button><i class="fa-solid fa-paper-plane"></i></button>
+      </div> -->
+
+      <p class="contact-info">
+        <i class="fa-solid fa-phone"></i> +91 98765 43210 <br>
+        <i class="fa-solid fa-envelope"></i> support@techsolutions.com
+      </p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 TechSolutions — All Rights Reserved.</p>
+  </div>
+</footer>
+
+<!-- Fontawesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="net.js"></script>

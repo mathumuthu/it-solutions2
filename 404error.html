@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 - Page Not Found | IT Solutions</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #0a1f44, #0e356b);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 40px;
+    }
+
+    .error {
+      font-size: 120px;
+      font-weight: 700;
+      color: #4da3ff;
+      animation: float 3s ease-in-out infinite;
+      text-shadow: 0px 0px 25px rgba(77, 163, 255, 0.6);
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-18px); }
+      100% { transform: translateY(0px); }
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-top: 10px;
+    }
+
+    p {
+      margin: 15px 0 30px;
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      font-size: 16px;
+      border: none;
+      color: #fff;
+      text-decoration: none;
+      background: #4da3ff;
+      border-radius: 50px;
+      transition: 0.3s;
+      display: inline-block;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      background: #1b75d1;
+      transform: scale(1.06);
+    }
+
+    /* Floating Circle Effects */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.08);
+      animation: circles 10s infinite linear;
+    }
+
+    .c1 { width: 200px; height: 200px; top: -50px; left: -70px; }
+    .c2 { width: 150px; height: 150px; bottom: -40px; right: -60px; }
+
+    @keyframes circles {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      .error {
+        font-size: 90px;
+      }
+      h2 {
+        font-size: 26px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Floating Background Circles -->
+  <div class="circle c1"></div>
+  <div class="circle c2"></div>
+
+  <div class="container">
+    <div class="error">404</div>
+    <h2>Oops! Page Not Found</h2>
+    <p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+
+    <a href="home page2.html" class="btn">🔙 Back to Home</a>
+  </div>
+
+</body>
+
+</html>
