@@ -83,121 +83,488 @@
 
 
 
+<!-- ========== VISION SECTION (PARALLAX) ========== -->
+<style>
+.white-section{
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  background:
+   linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+   url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4") center/cover fixed;
+  color:#fff;
+}
+.white-box{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+.white-box h2{
+  font-size:clamp(2.2rem,5vw,3.2rem);
+  margin-bottom:20px;
+  color:#ffffff;
+}
+.white-box p{
+  font-size:1.1rem;
+  line-height:1.8;
+  color:#ffffff;
+  max-width:800px;
+}
+</style>
 
-
-
-
-
-
-
-
-
-
-
-
-<!-- ====== HERO SECTION ====== -->
-<section class="it-hero">
-  <div class="hero-content">
-    <h1>Empowering Your Business With Next-Gen IT Solutions</h1>
-    <p>We deliver scalable, secure and intelligent technology solutions for businesses of all sizes.</p>
-    <a href="404.html" class="hero-btn">Get Started</a>
+<section class="white-section">
+  <div class="white-box">
+    <h2>Driving Innovation Through Technology</h2>
+    <p>
+      We design, develop, and manage enterprise IT solutions that empower
+      organizations to innovate faster, operate securely, and scale globally.
+      Our focus is on reliability, performance, and long-term digital success.
+    </p>
   </div>
 </section>
 
-<!-- ====== ABOUT SECTION ====== -->
-<section class="it-about section">
-  <h2 class="section-title">Why Choose Our IT Services?</h2>
-  <p class="section-subtitle">We combine innovation, technology and expertise to transform your business.</p>
+<!-- ========== CAPABILITIES ========== -->
+<style>
+.capabilities{
+  padding:100px 20px;
+  background:#020617;
+  color:#ffffff;
+}
+.capabilities h2{
+  text-align:center;
+  font-size:2.7rem;
+  margin-bottom:60px;
+}
+.cap-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.cap{
+  background:#0f172a;
+  padding:35px;
+  border-radius:18px;
+  transition:.4s;
+}
+.cap:hover{
+  transform:translateY(-8px);
+  box-shadow:0 25px 50px rgba(0,0,0,.6);
+}
+.cap h3{color:#ffffff;margin-bottom:10px}
+.cap p{color:#ffffff;line-height:1.6}
+</style>
 
-  <div class="about-grid">
-    <div class="about-card fade-up">
-      <i class="fa-solid fa-shield-halved"></i>
-      <h3>Secure</h3>
-      <p>Advanced security systems protect your data and ensure safe IT operations.</p>
+<section class="capabilities">
+  <h2>Our Core Capabilities</h2>
+  <div class="cap-grid">
+    <div class="cap">
+      <h3>Enterprise Application Development</h3>
+      <p>Robust and scalable applications built with modern frameworks and secure architectures.</p>
     </div>
-
-    <div class="about-card fade-up">
-      <i class="fa-solid fa-bolt"></i>
-      <h3>Fast Performance</h3>
-      <p>Optimized IT infrastructure designed for top-level speed and efficiency.</p>
+    <div class="cap">
+      <h3>Cloud & Infrastructure Services</h3>
+      <p>Design, migration, and management of high-availability cloud environments.</p>
     </div>
-
-    <div class="about-card fade-up">
-      <i class="fa-solid fa-cloud"></i>
-      <h3>Cloud Ready</h3>
-      <p>Solutions built for complete scalability through modern cloud technologies.</p>
+    <div class="cap">
+      <h3>Cybersecurity & Compliance</h3>
+      <p>End-to-end security strategies protecting data, networks, and systems.</p>
     </div>
-
-    <div class="about-card fade-up">
-      <i class="fa-solid fa-headset"></i>
-      <h3>24/7 Support</h3>
-      <p>We are always here to assist you with your IT needs anytime.</p>
+    <div class="cap">
+      <h3>Digital Transformation</h3>
+      <p>Modernizing legacy systems to drive agility, efficiency, and innovation.</p>
     </div>
   </div>
 </section>
 
-<!-- ====== SERVICES SECTION ====== -->
-<section class="it-services section" id="services">
-  <h2 class="section-title">Our IT Services</h2>
-  <p class="section-subtitle">High-quality professional IT services for every business.</p>
+<!-- ========== EXPERIENCE STRIP (PARALLAX) ========== -->
+<style>
+.experience{
+  min-height:75vh;
+  background:
+   linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
+   url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d") center/cover fixed;
+  display:flex;
+  align-items:center;
+  text-align:center;
+  color:#fff;
+}
+.experience h2{
+  font-size:clamp(2.2rem,5vw,3rem);
+  margin-bottom:15px;
+}
+.experience p{
+  max-width:900px;
+  margin:auto;
+  font-size:1.15rem;
+  line-height:1.8;
+}
+</style>
 
-  <div class="services-grid">
-
-    <div class="service-card zoom-card">
-      <i class="fa-solid fa-network-wired"></i>
-      <h3>Network Solutions</h3>
-      <p>We design secure network systems tailored for smooth business operations.</p>
-      <a href="404.html" class="btn-read">Read More</a>
-    </div>
-
-    <div class="service-card zoom-card">
-      <i class="fa-solid fa-server"></i>
-      <h3>Server Management</h3>
-      <p>Reliable server installations, monitoring and optimization.</p>
-      <a href="404.html" class="btn-read">Read More</a>
-    </div>
-
-    <div class="service-card zoom-card">
-      <i class="fa-solid fa-laptop-code"></i>
-      <h3>Web Development</h3>
-      <p>Modern websites built with powerful features and fast performance.</p>
-      <a href="404.html" class="btn-read">Read More</a>
-    </div>
-
-    <div class="service-card zoom-card">
-      <i class="fa-solid fa-lock"></i>
-      <h3>Cyber Security</h3>
-      <p>Strong protection solutions that keep your system safe from threats.</p>
-      <a href="404.html" class="btn-read">Read More</a>
-    </div>
-
+<section class="experience">
+  <div>
+    <h2>Experience That Delivers Results</h2>
+    <p>
+      With years of industry expertise, we have helped startups, enterprises,
+      and global organizations achieve operational excellence through
+      innovative IT solutions and continuous support.
+    </p>
   </div>
 </section>
 
-<!-- ====== BRANDS SECTION ====== -->
-<section class="it-brands section" id="brands">
-  <h2 class="section-title">Trusted By Top Brands</h2>
-  <p class="section-subtitle">Companies that rely on our expertise and technology.</p>
+<!-- ========== VALUES ========== -->
+<style>
+.values{
+  padding:100px 20px;
+  background:#020617;
+  color:#ffffff;
+}
+.values h2{
+  text-align:center;
+  font-size:2.6rem;
+  margin-bottom:60px;
+}
+.values-grid{
+  max-width:1100px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.value{
+  background:#0f172a;
+  padding:30px;
+  border-radius:16px;
+}
+.value h3{color:#ffffff;margin-bottom:10px}
+.value p{color:#ffffff;line-height:1.7}
+</style>
 
-  <div class="brand-logos">
-    <img src="logo1.webp" alt="Brand">
-    <img src="logo2.webp" alt="Brand">
-    <img src="logo3.webp" alt="Brand">
-    <img src="logo4.webp" alt="Brand">
-    <img src="logo5.webp" alt="Brand">
+<section class="values">
+  <h2>Our Values</h2>
+  <div class="values-grid">
+    <div class="value">
+      <h3>Innovation</h3>
+      <p>We continuously adopt emerging technologies to deliver future-ready solutions.</p>
+    </div>
+    <div class="value">
+      <h3>Security</h3>
+      <p>Protecting client data and systems is at the core of everything we do.</p>
+    </div>
+    <div class="value">
+      <h3>Reliability</h3>
+      <p>We build dependable systems that businesses can trust.</p>
+    </div>
+    <div class="value">
+      <h3>Customer Focus</h3>
+      <p>Our solutions are designed around real business needs and outcomes.</p>
+    </div>
   </div>
 </section>
 
-<!-- ====== CALL TO ACTION ====== -->
-<section class="cta-section">
-  <h2>Let’s Build Your IT Future Together</h2>
-   <p>Boost your business with powerful, innovative and secure IT solutions.</p> 
-  <!-- <a href="#" class="cta-btn">Start Now</a> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========== WHY CHOOSE US ========== -->
+<style>
+.choose{
+  padding:100px 20px;
+  background:linear-gradient(135deg,#020617,#0f172a);
+}
+.choose h2{
+  text-align:center;
+  font-size:2.6rem;
+  margin-bottom:60px;
+  color: rgb(227, 231, 219);
+}
+.choose-grid{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+.choose-card{
+  background:#d2d4da;
+  padding:35px;
+  border-radius:18px;
+  text-align:center;
+  transition:.4s;
+  opacity:0;
+  transform:translateY(40px);
+}
+.choose-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 25px 50px rgba(0,0,0,.6);
+}
+.choose-card span{
+  font-size:2.8rem;
+  display:block;
+  margin-bottom:15px;
+  color:#38bdf8;
+}
+</style>
+
+<section class="choose">
+  <h2>Why Choose Our IT Solutions</h2>
+  <div class="choose-grid">
+    <div class="choose-card reveal">
+      <span>⚡</span>
+      <h3>High Performance</h3>
+      <p>Optimized systems built for speed, stability, and scale.</p>
+    </div>
+    <div class="choose-card reveal">
+      <span>🔐</span>
+      <h3>Secure by Design</h3>
+      <p>Advanced security practices protecting your data.</p>
+    </div>
+    <div class="choose-card reveal">
+      <span>🤝</span>
+      <h3>Trusted Partner</h3>
+      <p>Long-term IT partnership for growing businesses.</p>
+    </div>
+    <div class="choose-card reveal">
+      <span>🚀</span>
+      <h3>Future Ready</h3>
+      <p>Modern technologies prepared for tomorrow.</p>
+    </div>
+  </div>
 </section>
 
+<!-- ========== PARALLAX INDUSTRIES ========== -->
+<style>
+.parallax-industries{
+  min-height:80vh;
+  background:
+   linear-gradient(rgba(2,6,23,.85),rgba(2,6,23,.85)),
+   url("https://images.unsplash.com/photo-1526378722484-bd91ca387e72") center/cover fixed;
+  display:flex;
+  align-items:center;
+  color:#38bdf8 ;
+}
+.industry-box{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+.industry-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:25px;
+}
+.industry{
+  background:#020617;
+  padding:30px;
+  border-radius:16px;
+  text-align:center;
+  animation:float 4s ease-in-out infinite;
+}
+.industry h4{color:#38bdf8;margin-top:10px}
+</style>
+
+<section class="parallax-industries">
+  <div class="industry-box">
+    <h2 style="text-align:center;font-size:2.5rem;margin-bottom:50px">
+      Industries We Serve
+    </h2>
+    <div class="industry-grid">
+      <div class="industry">🏦<h4>Finance</h4></div>
+      <div class="industry">🏥<h4>Healthcare</h4></div>
+      <div class="industry">🛒<h4>E-Commerce</h4></div>
+      <div class="industry">🎓<h4>Education</h4></div>
+      <div class="industry">🏭<h4>Manufacturing</h4></div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<style>
+.testimonials{
+  padding:100px 20px;
+  background:linear-gradient(135deg,#020617,#0f172a);
+}
+.testimonials h2{
+  text-align:center;
+  font-size:2.6rem;
+  margin-bottom:60px;
+  color: #38bdf8;
+}
+.testi-grid{
+  max-width:1000px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+}
+.testi{
+  background:#020617;
+  padding:30px;
+  border-radius:18px;
+  position:relative;
+  opacity:0;
+  transform:scale(.9);
+  transition:.5s;
+}
+.testi.active{
+  opacity:1;
+  transform:scale(1);
+}
+.testi p{color:#cbd5f5}
+.testi h4{margin-top:15px;color:#38bdf8}
+</style>
+
+<section class="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testi-grid">
+    <div class="testi reveal-scale">
+      <p>“Outstanding IT support and fast delivery.”</p>
+      <h4>— Enterprise Client</h4>
+    </div>
+    <div class="testi reveal-scale">
+      <p>“Secure, scalable and reliable solutions.”</p>
+      <h4>— Startup Founder</h4>
+    </div>
+    <div class="testi reveal-scale">
+      <p>“Perfect partner for digital transformation.”</p>
+      <h4>— CTO</h4>
+    </div>
+  </div>
+</section>
 
+<!-- ========== SUPPORT STRIP PARALLAX ========== -->
+<style>
+.support-strip{
+  min-height:70vh;
+  background:
+   linear-gradient(rgba(15,23,42,.9),rgba(15,23,42,.9)),
+   url("https://images.unsplash.com/photo-1498050108023-c5249f4df085") center/cover fixed;
+  display:flex;
+  align-items:center;
+  text-align:center;
+}
+.support-box{
+  max-width:800px;
+  margin:auto;
+}
+.support-box h2{
+  font-size:2.6rem;
+  margin-bottom:20px;
+}
+.support-box p{color:#cbd5f5}
+</style>
 
+<section class="support-strip">
+  <div class="support-box">
+    <h2>24/7 Monitoring & Support</h2>
+    <p>We ensure continuous uptime, proactive monitoring, and rapid incident response.</p>
+  </div>
+</section>
 
+<script>
+/* REVEAL ANIMATIONS */
+const revealAll=document.querySelectorAll('.reveal,.reveal-scale');
+const io2=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      if(e.target.classList.contains('reveal-scale')){
+        e.target.classList.add('active');
+      }else{
+        e.target.style.opacity=1;
+        e.target.style.transform="translateY(0)";
+      }
+    }
+  })
+},{threshold:.2});
+revealAll.forEach(el=>io2.observe(el));
+</script>
 
 
 
@@ -264,90 +631,69 @@
 
 
 
-  
 
 
-<!-- ================= FOOTER SECTION ================= -->
-<footer class="it-footer">
-  <div class="footer-container">
 
-    <!-- Column 1 -->
-    <div class="footer-col">
-      <h2 class="footer-logo">
-        <i class="fa-solid fa-cde"></i> STACKLY
-      </h2>
-      <p class="footer-text">
-        We provide IT services, cloud solutions, UI/UX design, app development, 
-        cyber security, and technical support.
+
+
+
+
+
+
+
+<footer class="neo-footer">
+  <div class="neo-bg"></div>
+
+  <div class="neo-container">
+
+    <div class="neo-box brand">
+      <h2><i class="fa-solid fa-layer-group"></i> STACKLY</h2>
+      <p>
+        Next-gen IT solutions including cloud, cybersecurity,
+        UI/UX, automation and enterprise support.
       </p>
 
-      <div class="footer-social">
-        <a href="404.html"><i class="fa-brands fa-facebook"></i></a>
+      <div class="neo-social">
+        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
         <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
-        <a href="404.html"><i class="fa-brands fa-twitter"></i></a>
-        <a href="404.html"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
     </div>
 
-    <!-- Column 2 -->
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="service.html">Our Services</a></li>
-        <li><a href="about us.html">About Us</a></li>
-        <li><a href="sucess.html">Sucess Story</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div class="neo-box">
+      <h4>Company</h4>
+      <a href="index.html">Home</a>
+      <a href="about us.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="sucess.html">Success</a>
+      <a href="contact.html">Contact</a>
     </div>
 
-    <!-- Column 3 -->
-    <div class="footer-col">
-      <h3>IT Services</h3>
-      <ul>
-        <li><a href="404.html">Web Development</a></li>
-        <li><a href="404.html">App Development</a></li>
-        <li><a href="404.html">Cloud Computing</a></li>
-        <li><a href="404.html">Cyber Security</a></li>
-        <li><a href="404.html">UI/UX & Branding</a></li>
-      </ul>
+    <div class="neo-box">
+      <h4>Solutions</h4>
+      <a href="404.html">Web Apps</a>
+      <a href="404.html">Cloud Systems</a>
+      <a href="404.html">Cyber Defense</a>
+      <a href="404.html">Mobile Apps</a>
+      <a href="404.html">Brand Identity</a>
     </div>
 
-    <!-- Column 4 -->
-    <!-- <div class="footer-col">
-      <h3>Newsletter</h3>
-      <p>Subscribe to get the latest tech updates.</p>
-      <div class="newsletter-box">
-        <input type="email" placeholder="Enter your email" />
-        <button><i class="fa-solid fa-paper-plane"></i></button>
-      </div> -->
-
-      <p class="contact-info">
-        <i class="fa-solid fa-phone"></i> +91 98765 43210 <br>
-        <i class="fa-solid fa-envelope"></i> support@techsolutions.com
-      </p>
+    <div class="neo-box contact">
+      <h4>Reach Us</h4>
+      <span><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
+      <span><i class="fa-solid fa-envelope"></i> hello@stackly.tech</span>
     </div>
 
   </div>
 
-  <div class="footer-bottom">
-    <p>© 2025 TechSolutions — All Rights Reserved.</p>
+  <div class="neo-copy">
+    © 2025 STACKLY • Built for the Future
   </div>
 </footer>
 
-<!-- Fontawesome Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-
-
-
-
-
-
-
-
-
-
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
 
 
 

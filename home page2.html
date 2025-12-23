@@ -73,143 +73,236 @@
 
 
 
-<!-- HERO / BANNER -->
-<section class="it-hero">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= IT SOLUTION BODY START ================= -->
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{background:#020617}
+
+/* ===== WRAPPER ===== */
+.it-body{color:#fff;overflow-x:hidden}
+
+/* ===== HERO ===== */
+.hero{
+  min-height:100vh;
+  background:
+   linear-gradient(to right,rgba(2,6,23,.9),rgba(15,23,42,.85)),
+   url("https://images.unsplash.com/photo-1518770660439-4636190af475") center/cover fixed;
+  display:flex;
+  align-items:center;
+  padding:70px 20px;
+}
+.hero-content{max-width:650px;animation:fadeSlide 1.2s ease}
+.hero h1{font-size:clamp(2.2rem,5vw,3.6rem)}
+.hero span{color:#38bdf8}
+.hero p{margin:20px 0;color:#cbd5f5}
+.hero button{
+  padding:15px 38px;border-radius:30px;border:none;
+  background:linear-gradient(90deg,#38bdf8,#6366f1);
+  color:#fff;font-size:16px;cursor:pointer;transition:.4s
+}
+.hero button:hover{transform:translateY(-6px);box-shadow:0 15px 40px rgba(56,189,248,.5)}
+
+/* ===== ABOUT ===== */
+.about{
+  padding:100px 20px;
+  background:
+   linear-gradient(rgba(2,6,23,.95),rgba(2,6,23,.95)),
+   url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover;
+}
+.about-box{
+  max-width:1100px;margin:auto;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;align-items:center
+}
+.about img{
+  width:100%;border-radius:18px;
+  box-shadow:0 30px 60px rgba(0,0,0,.5)
+}
+
+/* ===== SERVICES ===== */
+.services{
+  padding:100px 20px;
+  background:linear-gradient(135deg,#020617,#0f172a)
+}
+.services h2{text-align:center;font-size:2.6rem;margin-bottom:60px}
+.service-grid{
+  max-width:1200px;margin:auto;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px
+}
+.service{
+  background:
+   linear-gradient(rgba(2,6,23,.85),rgba(2,6,23,.85)),
+   url("https://images.unsplash.com/photo-1537432376769-00a5c8b6f5c9") center/cover;
+  padding:35px;border-radius:20px;
+  transition:.4s;opacity:0;transform:translateY(40px)
+}
+.service:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,.6)}
+.service h3{color:#38bdf8;margin-bottom:10px}
+
+/* ===== PROCESS ===== */
+.process{
+  padding:100px 20px;
+  background:
+   linear-gradient(rgba(15,23,42,.9),rgba(15,23,42,.9)),
+   url("https://images.unsplash.com/photo-1553877522-43269d4ea984") center/cover fixed;
+}
+.process h2{text-align:center;font-size:2.5rem;margin-bottom:50px}
+.steps{
+  max-width:1000px;margin:auto;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px
+}
+.step{
+  background:#020617;padding:30px;border-radius:16px;
+  animation:float 4s ease-in-out infinite
+}
+
+/* ===== STATS ===== */
+.stats{
+  padding:90px 20px;
+  background:linear-gradient(90deg,#020617,#0f172a)
+}
+.stats-box{
+  max-width:1000px;margin:auto;
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:30px;text-align:center
+}
+.stat{background:#020617;padding:30px;border-radius:16px}
+.stat h3{font-size:2.5rem;color:#38bdf8}
+
+/* ===== CTA ===== */
+.cta{
+  padding:120px 20px;text-align:center;
+  background:
+   linear-gradient(rgba(2,6,23,.9),rgba(2,6,23,.9)),
+   url("https://images.unsplash.com/photo-1498050108023-c5249f4df085") center/cover;
+}
+.cta h2{font-size:2.7rem;margin-bottom:20px}
+.cta button{
+  padding:16px 40px;border-radius:30px;border:none;
+  background:linear-gradient(90deg,#6366f1,#38bdf8);
+  color:#fff;font-size:17px;cursor:pointer;transition:.4s
+}
+.cta button:hover{transform:scale(1.08)}
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeSlide{
+  from{opacity:0;transform:translateX(-60px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  .hero{text-align:center}
+  .about-box{text-align:center}
+}
+</style>
+
+<div class="it-body">
+
+<!-- HERO -->
+<section class="hero">
   <div class="hero-content">
-    <h1 class="hero-title">Advanced IT Solutions for Modern Businesses</h1>
-    <p class="hero-subtitle">We build secure, scalable and future-ready digital solutions that empower your business to grow.</p>
-    <a href="404error.html" class="hero-btn">Learn More</a>
-  </div>
-  <img src="https://img.freepik.com/free-vector/data-points-concept-illustration_114360-1591.jpg" class="hero-img">
-</section>
-
-
-<!-- ABOUT US -->
-<section class="it-about" id="aboutus">
-  <div class="about-left">
-    <img src="img5 (4).webp" />
-  </div>
-
-  <div class="about-right">
-    <h2>Who We Are</h2>
-    <p>We are a global IT solutions provider specializing in cloud services, AI automation, enterprise applications, and digital transformation. Our mission is to bring innovation and efficiency to every business we serve.</p>
-
-    <p>With a strong team of experienced developers, analysts and designers, we deliver high-performance digital products for all industries.</p>
+    <h1>Innovative <span>IT Solutions</span><br>For Digital Growth</h1>
+    <p>Enterprise-grade software, cloud & security services designed to scale your business.</p>
+   <a href="404error.html"><button>Explore Services</button></a> 
   </div>
 </section>
 
-
-<!-- KEY FEATURES -->
-<section class="it-features">
-  <h2 class="section-title">Our Key Features</h2>
-
-  <div class="feature-grid">
-
-    <div class="feature-card">
-      <h3>High Security</h3>
-      <p>End-to-end security systems designed to protect your business from cyber threats.</p>
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-box">
+    <div>
+      <h2>About Our Company</h2>
+      <p>We help startups and enterprises transform digitally with secure, scalable and modern IT solutions.</p>
     </div>
-
-    <div class="feature-card">
-      <h3>Scalable Systems</h3>
-      <p>Our solutions grow as your business grows with flexible architectures.</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>Professional Team</h3>
-      <p>Certified IT professionals delivering high-quality work on time.</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>24/7 Support</h3>
-      <p>Round-the-clock support to ensure your operations run smoothly.</p>
-    </div>
-
+    <img src="https://images.unsplash.com/photo-1605379399642-870262d3d051" alt="">
   </div>
 </section>
 
-
-<!-- OUR EXPERTISE -->
-<section class="it-expertise">
-  <h2 class="section-title">Our Expertise</h2>
-
-  <div class="expertise-grid">
-
-    <div class="expertise-box">
-      <h3>Cloud Infrastructure</h3>
-      <p>Secure cloud architecture, deployment & optimization.</p>
-    </div>
-
-    <div class="expertise-box">
-      <h3>Artificial Intelligence</h3>
-      <p>AI workflows, automation tools, and predictive models.</p>
-    </div>
-
-    <div class="expertise-box">
-      <h3>Mobile & Web Apps</h3>
-      <p>High-performance apps with modern UI/UX and optimized code.</p>
-    </div>
-
-    <div class="expertise-box">
-      <h3>Data Analytics</h3>
-      <p>Transform raw data into meaningful insights.</p>
-    </div>
-
+<!-- SERVICES -->
+<section class="services">
+  <h2>Our Expertise</h2>
+  <div class="service-grid">
+    <div class="service reveal"><h3>Software Development</h3><p>High-performance web & mobile apps.</p></div>
+    <div class="service reveal"><h3>Cloud Solutions</h3><p>Secure cloud migration & DevOps.</p></div>
+    <div class="service reveal"><h3>Cyber Security</h3><p>Advanced protection & monitoring.</p></div>
+    <div class="service reveal"><h3>IT Consulting</h3><p>Digital strategy & architecture.</p></div>
   </div>
 </section>
 
-
-<!-- TECHNOLOGIES WE USE -->
-<section class="it-tech">
-  <h2 class="section-title">Technologies We Work With</h2>
-
-  <div class="tech-logos">
-
-    <span>HTML5</span>
-    <span>CSS3</span>
-    <span>JavaScript</span>
-    <span>React</span>
-    <span>Node.js</span>
-    <span>Python</span>
-    <span>AWS</span>
-    <span>Docker</span>
-
+<!-- PROCESS -->
+<section class="process">
+  <h2>How We Work</h2>
+  <div class="steps">
+    <div class="step">📌 Analysis</div>
+    <div class="step">🧩 Planning</div>
+    <div class="step">⚙ Development</div>
+    <div class="step">🚀 Launch</div>
   </div>
 </section>
 
-
-<!-- TESTIMONIALS -->
-<section class="it-testimonials">
-  <h2 class="section-title">What Clients Say</h2>
-
-  <div class="test-grid">
-
-    <div class="test-card">
-      <p>"Amazing IT support! They helped us automate our full workflow."</p>
-      <h4>— Sarah Williams</h4>
-    </div>
-
-    <div class="test-card">
-      <p>"Professional team, quick delivery and high-quality product."</p>
-      <h4>— Daniel Joseph</h4>
-    </div>
-
-    <div class="test-card">
-      <p>"Their cloud migration service was smooth and secure."</p>
-      <h4>— Priya Kumar</h4>
-    </div>
-
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-box">
+    <div class="stat"><h3>500+</h3><p>Projects</p></div>
+    <div class="stat"><h3>24/7</h3><p>Support</p></div>
+    <div class="stat"><h3>99%</h3><p>Client Satisfaction</p></div>
   </div>
 </section>
 
-
-<!-- CONTACT CTA -->
-<section class="it-contact">
-  <h2>Let’s Build Something Great Together</h2>
-  <p>Contact our expert team and take your business to the next level.</p>
-  <a href="404error.html" class="cta-btn">Get in Touch</a>
+<!-- CTA -->
+<section class="cta">
+  <h2>Start Your Digital Journey Today</h2>
+ <a href="404error.html"><button>Get In Touch</button></a> 
 </section>
 
+</div>
+
+<script>
+const reveal=document.querySelectorAll('.reveal');
+const io=new IntersectionObserver(e=>{
+  e.forEach(x=>{
+    if(x.isIntersecting){
+      x.target.style.opacity=1;
+      x.target.style.transform="translateY(0)";
+    }
+  })
+},{threshold:.2});
+reveal.forEach(r=>io.observe(r));
+</script>
+
+<!-- ================= IT SOLUTION BODY END ================= -->
 
 
 
@@ -256,77 +349,64 @@
 
 
 
+<footer class="neo-footer">
+  <div class="neo-bg"></div>
 
-<!-- ================= FOOTER SECTION ================= -->
-<footer class="it-footer">
-  <div class="footer-container">
+  <div class="neo-container">
 
-    <!-- Column 1 -->
-    <div class="footer-col">
-      <h2 class="footer-logo">
-        <i class="fa-solid fa-cde"></i> STACKLY
-      </h2>
-      <p class="footer-text">
-        We provide IT services, cloud solutions, UI/UX design, app development, 
-        cyber security, and technical support.
+    <div class="neo-box brand">
+      <h2><i class="fa-solid fa-layer-group"></i> STACKLY</h2>
+      <p>
+        Next-gen IT solutions including cloud, cybersecurity,
+        UI/UX, automation and enterprise support.
       </p>
 
-      <div class="footer-social">
-        <a href="404error.html"><i class="fa-brands fa-facebook"></i></a>
-        <a href="404error.html"><i class="fa-brands fa-instagram"></i></a>
-        <a href="404error.html"><i class="fa-brands fa-twitter"></i></a>
-        <a href="404error.html"><i class="fa-brands fa-linkedin"></i></a>
+      <div class="neo-social">
+        <a href="404.html"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="404.html"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="404.html"><i class="fa-brands fa-instagram"></i></a>
+        <a href="404.html"><i class="fa-brands fa-linkedin-in"></i></a>
       </div>
     </div>
 
-    <!-- Column 2 -->
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="service.html">Our Services</a></li>
-        <li><a href="about us.html">About Us</a></li>
-        <li><a href="sucess.html">Sucess Story</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+    <div class="neo-box">
+      <h4>Company</h4>
+      <a href="index.html">Home</a>
+      <a href="about us.html">About</a>
+      <a href="service.html">Services</a>
+      <a href="sucess.html">Success</a>
+      <a href="contact.html">Contact</a>
     </div>
 
-    <!-- Column 3 -->
-    <div class="footer-col">
-      <h3>IT Services</h3>
-      <ul>
-        <li><a href="404error.html">Web Development</a></li>
-        <li><a href="404error.html">App Development</a></li>
-        <li><a href="404error.html">Cloud Computing</a></li>
-        <li><a href="404error.html">Cyber Security</a></li>
-        <li><a href="404error.html">UI/UX & Branding</a></li>
-      </ul>
+    <div class="neo-box">
+      <h4>Solutions</h4>
+      <a href="404.html">Web Apps</a>
+      <a href="404.html">Cloud Systems</a>
+      <a href="404.html">Cyber Defense</a>
+      <a href="404.html">Mobile Apps</a>
+      <a href="404.html">Brand Identity</a>
     </div>
 
-    <!-- Column 4 -->
-    <!-- <div class="footer-col">
-      <h3>Newsletter</h3>
-      <p>Subscribe to get the latest tech updates.</p>
-      <div class="newsletter-box">
-        <input type="email" placeholder="Enter your email" />
-        <button><i class="fa-solid fa-paper-plane"></i></button>
-      </div> -->
-
-      <p class="contact-info">
-        <i class="fa-solid fa-phone"></i> +91 98765 43210 <br>
-        <i class="fa-solid fa-envelope"></i> support@techsolutions.com
-      </p>
+    <div class="neo-box contact">
+      <h4>Reach Us</h4>
+      <span><i class="fa-solid fa-phone"></i> +91 98765 43210</span>
+      <span><i class="fa-solid fa-envelope"></i> hello@stackly.tech</span>
     </div>
 
   </div>
 
-  <div class="footer-bottom">
-    <p>© 2025 TechSolutions — All Rights Reserved.</p>
+  <div class="neo-copy">
+    © 2025 STACKLY • Built for the Future
   </div>
 </footer>
 
-<!-- Fontawesome Icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> 
+
+
+
+
+
 
 
 
