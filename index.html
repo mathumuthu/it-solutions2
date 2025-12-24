@@ -14,6 +14,8 @@
 <body>
   
 
+
+
 <div class="topbar">
   <header class="header">
     <div class="logo">
@@ -43,9 +45,7 @@
         <li><a href="./dashboard.html">Dashboard</a></li>
         <li><a href="./login.html">Log In</a></li>
         <li class="sign">
-          <button onclick="window.location.href='./contact.html'">
-            Contact Us →
-          </button>
+          <button onclick="window.location.href='./contact.html'">Contact Us →</button>
         </li>
       </ul>
     </div>
@@ -77,11 +77,8 @@
 
 
 
-
-
 <!-- ========== GLOBAL ANIMATION STYLES ========== -->
 <style>
-/* Scroll animations */
 .animate{opacity:0;transform:translateY(60px);transition:1s}
 .animate.active{opacity:1;transform:translateY(0)}
 .zoom-in{opacity:0;transform:scale(.85);transition:1.2s}
@@ -89,7 +86,6 @@
 .zoom-out{opacity:0;transform:scale(1.2);transition:1.2s}
 .zoom-out.active{opacity:1;transform:scale(1)}
 
-/* Background fade */
 .bg-section{
   position:relative;
   background-size:cover;
@@ -97,30 +93,22 @@
   background-attachment:fixed;
   transition:background-image 1.5s ease-in-out;
 }
-
-/* Overlay */
 .bg-section::before{
   content:"";
   position:absolute;
   inset:0;
   background:rgba(0,0,0,.75);
 }
-.bg-content{
-  position:relative;
-  z-index:2;
-}
+.bg-content{position:relative;z-index:2}
 
-/* Hover cards */
-.cap,.value{
-  transition:.4s;
-}
+.cap,.value{transition:.4s}
 .cap:hover,.value:hover{
   transform:translateY(-10px) scale(1.03);
   box-shadow:0 30px 60px rgba(0,0,0,.7);
 }
 </style>
 
-<!-- ========== VISION SECTION (BG CHANGE) ========== -->
+<!-- ========== VISION SECTION ========== -->
 <style>
 .white-section{
   min-height:85vh;
@@ -176,7 +164,9 @@
 </style>
 
 <section class="capabilities">
-  <h2 class="animate" style="text-align:center;font-size:2.7rem;margin-bottom:60px;">Our Core Capabilities</h2>
+  <h2 class="animate" style="text-align:center;font-size:2.7rem;margin-bottom:60px;">
+    Our Core Capabilities
+  </h2>
   <div class="cap-grid">
     <div class="cap animate">Enterprise Application Development</div>
     <div class="cap animate">Cloud & Infrastructure Services</div>
@@ -185,7 +175,7 @@
   </div>
 </section>
 
-<!-- ========== EXPERIENCE (BG CHANGE) ========== -->
+<!-- ========== EXPERIENCE SECTION ========== -->
 <style>
 .experience{
   min-height:75vh;
@@ -234,7 +224,9 @@
 </style>
 
 <section class="values">
-  <h2 class="animate" style="text-align:center;font-size:2.6rem;margin-bottom:60px;">Our Values</h2>
+  <h2 class="animate" style="text-align:center;font-size:2.6rem;margin-bottom:60px;">
+    Our Values
+  </h2>
   <div class="values-grid">
     <div class="value animate">Innovation</div>
     <div class="value animate">Security</div>
@@ -243,7 +235,7 @@
   </div>
 </section>
 
-<!-- ========== BACKGROUND IMAGE CHANGE SCRIPT ========== -->
+<!-- ========== SCRIPT ========== -->
 <script>
 /* Scroll animation */
 const observer=new IntersectionObserver(entries=>{
@@ -256,17 +248,17 @@ const observer=new IntersectionObserver(entries=>{
 document.querySelectorAll(".animate,.zoom-in,.zoom-out")
 .forEach(el=>observer.observe(el))
 
-/* Background image rotation */
+/* WEBP background image rotation */
 const visionImages=[
- "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
- "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
- "https://images.unsplash.com/photo-1531297484001-80022131f5a1"
+ "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1600&q=80",
+ "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+ "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=1600&q=80"
 ]
 
 const experienceImages=[
- "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
- "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
- "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+ "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80",
+ "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80",
+ "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80"
 ]
 
 let v=0,e=0
@@ -319,42 +311,15 @@ setInterval(changeBg,5000)
 
 
 
-
-
-
-
 <!-- ========== WHY CHOOSE US ========== -->
 <style>
-/* ===== COMMON ANIMATIONS ===== */
-.reveal{
-  opacity:0;
-  transform:translateY(50px);
-  transition:1s ease;
-}
-.reveal.active{
-  opacity:1;
-  transform:translateY(0);
-}
-.zoom-out{
-  opacity:0;
-  transform:scale(1.15);
-  transition:1.1s ease;
-}
-.zoom-out.active{
-  opacity:1;
-  transform:scale(1);
-}
-.reveal-scale{
-  opacity:0;
-  transform:scale(.85);
-  transition:.9s ease;
-}
-.reveal-scale.active{
-  opacity:1;
-  transform:scale(1);
-}
+.reveal{opacity:0;transform:translateY(50px);transition:1s ease}
+.reveal.active{opacity:1;transform:translateY(0)}
+.zoom-out{opacity:0;transform:scale(1.15);transition:1.1s ease}
+.zoom-out.active{opacity:1;transform:scale(1)}
+.reveal-scale{opacity:0;transform:scale(.85);transition:.9s ease}
+.reveal-scale.active{opacity:1;transform:scale(1)}
 
-/* ===== FLOAT ===== */
 @keyframes float{
   0%,100%{transform:translateY(0)}
   50%{transform:translateY(-12px)}
@@ -399,20 +364,21 @@ setInterval(changeBg,5000)
 <section class="choose">
   <h2 class="reveal">Why Choose Our IT Solutions</h2>
   <div class="choose-grid">
-    <div class="choose-card reveal zoom-out"><span>⚡</span><h3>High Performance</h3><p>Optimized systems built for speed, stability, and scale.</p></div>
-    <div class="choose-card reveal zoom-out"><span>🔐</span><h3>Secure by Design</h3><p>Advanced security practices protecting your data.</p></div>
-    <div class="choose-card reveal zoom-out"><span>🤝</span><h3>Trusted Partner</h3><p>Long-term IT partnership for growing businesses.</p></div>
-    <div class="choose-card reveal zoom-out"><span>🚀</span><h3>Future Ready</h3><p>Modern technologies prepared for tomorrow.</p></div>
+    <div class="choose-card reveal zoom-out">⚡<h3>High Performance</h3><p>Optimized systems built for speed, stability, and scale.</p></div>
+    <div class="choose-card reveal zoom-out">🔐<h3>Secure by Design</h3><p>Advanced security practices protecting your data.</p></div>
+    <div class="choose-card reveal zoom-out">🤝<h3>Trusted Partner</h3><p>Long-term IT partnership for growing businesses.</p></div>
+    <div class="choose-card reveal zoom-out">🚀<h3>Future Ready</h3><p>Modern technologies prepared for tomorrow.</p></div>
   </div>
 </section>
 
-<!-- ========== PARALLAX INDUSTRIES ========== -->
+<!-- ========== PARALLAX INDUSTRIES (WEBP) ========== -->
 <style>
 .parallax-industries{
   min-height:80vh;
   background:
    linear-gradient(rgba(2,6,23,.85),rgba(2,6,23,.85)),
-   url("https://images.unsplash.com/photo-1526378722484-bd91ca387e72") center/cover fixed;
+   url("https://images.unsplash.com/photo-1526378722484-bd91ca387e72?auto=format&fit=crop&w=1600&q=80")
+   center/cover fixed;
   display:flex;
   align-items:center;
   color:#38bdf8;
@@ -489,13 +455,14 @@ setInterval(changeBg,5000)
   </div>
 </section>
 
-<!-- ========== SUPPORT STRIP ========== -->
+<!-- ========== SUPPORT STRIP (WEBP) ========== -->
 <style>
 .support-strip{
   min-height:70vh;
   background:
    linear-gradient(rgba(15,23,42,.9),rgba(15,23,42,.9)),
-   url("https://images.unsplash.com/photo-1498050108023-c5249f4df085") center/cover fixed;
+   url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80")
+   center/cover fixed;
   display:flex;
   align-items:center;
   text-align:center;
@@ -519,7 +486,7 @@ setInterval(changeBg,5000)
   </div>
 </section>
 
-<!-- ========== SCRIPT (STAGGER SCROLL) ========== -->
+<!-- ========== SCRIPT ========== -->
 <script>
 const els=document.querySelectorAll('.reveal,.reveal-scale,.zoom-out');
 const obs=new IntersectionObserver(entries=>{
@@ -531,24 +498,6 @@ const obs=new IntersectionObserver(entries=>{
 },{threshold:.2});
 els.forEach(el=>obs.observe(el));
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
