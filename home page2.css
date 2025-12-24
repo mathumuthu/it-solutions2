@@ -170,8 +170,6 @@
 
 
 
-
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -316,6 +314,8 @@ span{
   margin: 0;
   padding: 0.5rem 1.5rem;
   gap: 1.5rem;
+    justify-content: flex-end;  /* align items right */
+
 }
 .linkRight li {
   position: relative;
@@ -508,20 +508,24 @@ span{
 
 
 
+/* ===== SMALL FIX: MOVE HEADER FUNCTIONALITY RIGHT ===== */
 
+/* Desktop only */
+@media (min-width: 768px) {
 
+  /* Move nav container to right */
+  .navBar .navLinks {
+    margin-left: auto;      /* pushes menu to right */
+    margin-right: 40px;     /* small gap from right */
+    padding-left: 0;
+  }
 
+  /* Align menu items to right */
+  .navBar .linkRight {
+    justify-content: flex-end;
+  }
 
-
-
-
-
-
-
-
-
-
-
+}
 
 
 

@@ -14,6 +14,31 @@ hamburger.addEventListener("click", () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".fade-up, .zoom-card");
 

@@ -14,49 +14,43 @@
 <body>
   
 
+<div class="topbar">
+  <header class="header">
+    <div class="logo">
+      <img src="logo .webp" alt="STACKLY Logo" />
+      <h2>STACKLY</h2>
+    </div>
 
+    <div class="contact">
+      <div class="contact1"></div>
+    </div>
 
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
+  </header>
 
- <div class="topbar">
-    <header class="header">
-      <div class="logo">
-        <img src="logo .webp" alt="STACKLY Logo" />
-        <h2>STACKLY</h2>
-      </div>
-      <div class="contact">
-        <div class="contact1">
-          <!-- <p class="phone"><a href="./404.html">+91 12345 67890</a></p> -->
-          <!-- <p class="email"><a href="./404.html">info@stackly.com</a></p> -->
-        </div>
-        <!-- <div class="time">
-          <p class="hours">Mon-Fri: 9 am-6 pm</p>
-        </div> -->
-      </div>
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">☰</button>
-    </header>
-
-    <nav class="navBar">
-      <div class="navLinks">
-        <ul class="linkRight">
-          <li class="dropdown">
-            <a href="./index.html">Home ▼</a>
-            <ul class="dropdown-menu">
-              <li><a href="./home page2.html">Home page 2</a></li>
-            </ul>
-          </li>
-          <li><a href="./service.html"> Service</a></li>
-          <li><a href="./about us.html">About Us</a></li>
-          <!-- <li><a href="./safety.html">support</a></li> -->
-          <!-- <li><a href="./trips.html">Learn</a></li> -->
-           <li><a href="./sucess.html">Sucess Stories</a></li> 
-         <li><a href="./dashboard.html">Dashboard</a></li>
-
-          <li><a href="./login.html">Log In</a></li>
-          <li class="sign"><button onclick="window.location.href='./contact.html'">Contact Us → </button></li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+  <nav class="navBar" id="navBar">
+    <div class="navLinks">
+      <ul class="linkRight">
+        <li class="dropdown">
+          <a href="./index.html">Home ▼</a>
+          <ul class="dropdown-menu">
+            <li><a href="./home page2.html">Home page 2</a></li>
+          </ul>
+        </li>
+        <li><a href="./service.html">Service</a></li>
+        <li><a href="./about us.html">About Us</a></li>
+        <li><a href="./sucess.html">Success Stories</a></li>
+        <li><a href="./dashboard.html">Dashboard</a></li>
+        <li><a href="./login.html">Log In</a></li>
+        <li class="sign">
+          <button onclick="window.location.href='./contact.html'">
+            Contact Us →
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
 
 
 
@@ -83,15 +77,55 @@
 
 
 
-<!-- ========== VISION SECTION (PARALLAX) ========== -->
+
+
+<!-- ========== GLOBAL ANIMATION STYLES ========== -->
+<style>
+/* Scroll animations */
+.animate{opacity:0;transform:translateY(60px);transition:1s}
+.animate.active{opacity:1;transform:translateY(0)}
+.zoom-in{opacity:0;transform:scale(.85);transition:1.2s}
+.zoom-in.active{opacity:1;transform:scale(1)}
+.zoom-out{opacity:0;transform:scale(1.2);transition:1.2s}
+.zoom-out.active{opacity:1;transform:scale(1)}
+
+/* Background fade */
+.bg-section{
+  position:relative;
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  transition:background-image 1.5s ease-in-out;
+}
+
+/* Overlay */
+.bg-section::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.75);
+}
+.bg-content{
+  position:relative;
+  z-index:2;
+}
+
+/* Hover cards */
+.cap,.value{
+  transition:.4s;
+}
+.cap:hover,.value:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 30px 60px rgba(0,0,0,.7);
+}
+</style>
+
+<!-- ========== VISION SECTION (BG CHANGE) ========== -->
 <style>
 .white-section{
   min-height:85vh;
   display:flex;
   align-items:center;
-  background:
-   linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
-   url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4") center/cover fixed;
   color:#fff;
 }
 .white-box{
@@ -102,23 +136,20 @@
 .white-box h2{
   font-size:clamp(2.2rem,5vw,3.2rem);
   margin-bottom:20px;
-  color:#ffffff;
 }
 .white-box p{
   font-size:1.1rem;
   line-height:1.8;
-  color:#ffffff;
   max-width:800px;
 }
 </style>
 
-<section class="white-section">
-  <div class="white-box">
+<section class="white-section bg-section" id="vision">
+  <div class="white-box bg-content zoom-in">
     <h2>Driving Innovation Through Technology</h2>
     <p>
       We design, develop, and manage enterprise IT solutions that empower
       organizations to innovate faster, operate securely, and scale globally.
-      Our focus is on reliability, performance, and long-term digital success.
     </p>
   </div>
 </section>
@@ -128,12 +159,7 @@
 .capabilities{
   padding:100px 20px;
   background:#020617;
-  color:#ffffff;
-}
-.capabilities h2{
-  text-align:center;
-  font-size:2.7rem;
-  margin-bottom:60px;
+  color:#fff;
 }
 .cap-grid{
   max-width:1200px;
@@ -146,53 +172,27 @@
   background:#0f172a;
   padding:35px;
   border-radius:18px;
-  transition:.4s;
 }
-.cap:hover{
-  transform:translateY(-8px);
-  box-shadow:0 25px 50px rgba(0,0,0,.6);
-}
-.cap h3{color:#ffffff;margin-bottom:10px}
-.cap p{color:#ffffff;line-height:1.6}
 </style>
 
 <section class="capabilities">
-  <h2>Our Core Capabilities</h2>
+  <h2 class="animate" style="text-align:center;font-size:2.7rem;margin-bottom:60px;">Our Core Capabilities</h2>
   <div class="cap-grid">
-    <div class="cap">
-      <h3>Enterprise Application Development</h3>
-      <p>Robust and scalable applications built with modern frameworks and secure architectures.</p>
-    </div>
-    <div class="cap">
-      <h3>Cloud & Infrastructure Services</h3>
-      <p>Design, migration, and management of high-availability cloud environments.</p>
-    </div>
-    <div class="cap">
-      <h3>Cybersecurity & Compliance</h3>
-      <p>End-to-end security strategies protecting data, networks, and systems.</p>
-    </div>
-    <div class="cap">
-      <h3>Digital Transformation</h3>
-      <p>Modernizing legacy systems to drive agility, efficiency, and innovation.</p>
-    </div>
+    <div class="cap animate">Enterprise Application Development</div>
+    <div class="cap animate">Cloud & Infrastructure Services</div>
+    <div class="cap animate">Cybersecurity & Compliance</div>
+    <div class="cap animate">Digital Transformation</div>
   </div>
 </section>
 
-<!-- ========== EXPERIENCE STRIP (PARALLAX) ========== -->
+<!-- ========== EXPERIENCE (BG CHANGE) ========== -->
 <style>
 .experience{
   min-height:75vh;
-  background:
-   linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),
-   url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d") center/cover fixed;
   display:flex;
   align-items:center;
   text-align:center;
   color:#fff;
-}
-.experience h2{
-  font-size:clamp(2.2rem,5vw,3rem);
-  margin-bottom:15px;
 }
 .experience p{
   max-width:900px;
@@ -202,13 +202,12 @@
 }
 </style>
 
-<section class="experience">
-  <div>
+<section class="experience bg-section" id="experience">
+  <div class="bg-content zoom-out">
     <h2>Experience That Delivers Results</h2>
     <p>
-      With years of industry expertise, we have helped startups, enterprises,
-      and global organizations achieve operational excellence through
-      innovative IT solutions and continuous support.
+      Helping startups and enterprises achieve operational excellence
+      through innovative IT solutions.
     </p>
   </div>
 </section>
@@ -218,12 +217,7 @@
 .values{
   padding:100px 20px;
   background:#020617;
-  color:#ffffff;
-}
-.values h2{
-  text-align:center;
-  font-size:2.6rem;
-  margin-bottom:60px;
+  color:#fff;
 }
 .values-grid{
   max-width:1100px;
@@ -237,81 +231,57 @@
   padding:30px;
   border-radius:16px;
 }
-.value h3{color:#ffffff;margin-bottom:10px}
-.value p{color:#ffffff;line-height:1.7}
 </style>
 
 <section class="values">
-  <h2>Our Values</h2>
+  <h2 class="animate" style="text-align:center;font-size:2.6rem;margin-bottom:60px;">Our Values</h2>
   <div class="values-grid">
-    <div class="value">
-      <h3>Innovation</h3>
-      <p>We continuously adopt emerging technologies to deliver future-ready solutions.</p>
-    </div>
-    <div class="value">
-      <h3>Security</h3>
-      <p>Protecting client data and systems is at the core of everything we do.</p>
-    </div>
-    <div class="value">
-      <h3>Reliability</h3>
-      <p>We build dependable systems that businesses can trust.</p>
-    </div>
-    <div class="value">
-      <h3>Customer Focus</h3>
-      <p>Our solutions are designed around real business needs and outcomes.</p>
-    </div>
+    <div class="value animate">Innovation</div>
+    <div class="value animate">Security</div>
+    <div class="value animate">Reliability</div>
+    <div class="value animate">Customer Focus</div>
   </div>
 </section>
 
+<!-- ========== BACKGROUND IMAGE CHANGE SCRIPT ========== -->
+<script>
+/* Scroll animation */
+const observer=new IntersectionObserver(entries=>{
+  entries.forEach((e,i)=>{
+    if(e.isIntersecting){
+      setTimeout(()=>e.target.classList.add("active"),i*120)
+    }
+  })
+},{threshold:.2})
+document.querySelectorAll(".animate,.zoom-in,.zoom-out")
+.forEach(el=>observer.observe(el))
 
+/* Background image rotation */
+const visionImages=[
+ "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
+ "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+ "https://images.unsplash.com/photo-1531297484001-80022131f5a1"
+]
 
+const experienceImages=[
+ "https://images.unsplash.com/photo-1504384308090-c894fdcc538d",
+ "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+ "https://images.unsplash.com/photo-1519389950473-47ba0277781c"
+]
 
+let v=0,e=0
+const vision=document.getElementById("vision")
+const experience=document.getElementById("experience")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+function changeBg(){
+  vision.style.backgroundImage=`url(${visionImages[v]})`
+  experience.style.backgroundImage=`url(${experienceImages[e]})`
+  v=(v+1)%visionImages.length
+  e=(e+1)%experienceImages.length
+}
+changeBg()
+setInterval(changeBg,5000)
+</script>
 
 
 
@@ -355,6 +325,41 @@
 
 <!-- ========== WHY CHOOSE US ========== -->
 <style>
+/* ===== COMMON ANIMATIONS ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(50px);
+  transition:1s ease;
+}
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+.zoom-out{
+  opacity:0;
+  transform:scale(1.15);
+  transition:1.1s ease;
+}
+.zoom-out.active{
+  opacity:1;
+  transform:scale(1);
+}
+.reveal-scale{
+  opacity:0;
+  transform:scale(.85);
+  transition:.9s ease;
+}
+.reveal-scale.active{
+  opacity:1;
+  transform:scale(1);
+}
+
+/* ===== FLOAT ===== */
+@keyframes float{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+}
+
 .choose{
   padding:100px 20px;
   background:linear-gradient(135deg,#020617,#0f172a);
@@ -363,7 +368,7 @@
   text-align:center;
   font-size:2.6rem;
   margin-bottom:60px;
-  color: rgb(227, 231, 219);
+  color:#e3e7db;
 }
 .choose-grid{
   max-width:1200px;
@@ -378,11 +383,9 @@
   border-radius:18px;
   text-align:center;
   transition:.4s;
-  opacity:0;
-  transform:translateY(40px);
 }
 .choose-card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-10px) scale(1.05);
   box-shadow:0 25px 50px rgba(0,0,0,.6);
 }
 .choose-card span{
@@ -394,28 +397,12 @@
 </style>
 
 <section class="choose">
-  <h2>Why Choose Our IT Solutions</h2>
+  <h2 class="reveal">Why Choose Our IT Solutions</h2>
   <div class="choose-grid">
-    <div class="choose-card reveal">
-      <span>⚡</span>
-      <h3>High Performance</h3>
-      <p>Optimized systems built for speed, stability, and scale.</p>
-    </div>
-    <div class="choose-card reveal">
-      <span>🔐</span>
-      <h3>Secure by Design</h3>
-      <p>Advanced security practices protecting your data.</p>
-    </div>
-    <div class="choose-card reveal">
-      <span>🤝</span>
-      <h3>Trusted Partner</h3>
-      <p>Long-term IT partnership for growing businesses.</p>
-    </div>
-    <div class="choose-card reveal">
-      <span>🚀</span>
-      <h3>Future Ready</h3>
-      <p>Modern technologies prepared for tomorrow.</p>
-    </div>
+    <div class="choose-card reveal zoom-out"><span>⚡</span><h3>High Performance</h3><p>Optimized systems built for speed, stability, and scale.</p></div>
+    <div class="choose-card reveal zoom-out"><span>🔐</span><h3>Secure by Design</h3><p>Advanced security practices protecting your data.</p></div>
+    <div class="choose-card reveal zoom-out"><span>🤝</span><h3>Trusted Partner</h3><p>Long-term IT partnership for growing businesses.</p></div>
+    <div class="choose-card reveal zoom-out"><span>🚀</span><h3>Future Ready</h3><p>Modern technologies prepared for tomorrow.</p></div>
   </div>
 </section>
 
@@ -428,7 +415,7 @@
    url("https://images.unsplash.com/photo-1526378722484-bd91ca387e72") center/cover fixed;
   display:flex;
   align-items:center;
-  color:#38bdf8 ;
+  color:#38bdf8;
 }
 .industry-box{
   max-width:1100px;
@@ -445,22 +432,22 @@
   padding:30px;
   border-radius:16px;
   text-align:center;
-  animation:float 4s ease-in-out infinite;
+  animation:float 5s ease-in-out infinite;
 }
-.industry h4{color:#38bdf8;margin-top:10px}
+.industry h4{margin-top:10px;color:#38bdf8}
 </style>
 
 <section class="parallax-industries">
-  <div class="industry-box">
+  <div class="industry-box zoom-out">
     <h2 style="text-align:center;font-size:2.5rem;margin-bottom:50px">
       Industries We Serve
     </h2>
     <div class="industry-grid">
-      <div class="industry">🏦<h4>Finance</h4></div>
-      <div class="industry">🏥<h4>Healthcare</h4></div>
-      <div class="industry">🛒<h4>E-Commerce</h4></div>
-      <div class="industry">🎓<h4>Education</h4></div>
-      <div class="industry">🏭<h4>Manufacturing</h4></div>
+      <div class="industry reveal">🏦<h4>Finance</h4></div>
+      <div class="industry reveal">🏥<h4>Healthcare</h4></div>
+      <div class="industry reveal">🛒<h4>E-Commerce</h4></div>
+      <div class="industry reveal">🎓<h4>Education</h4></div>
+      <div class="industry reveal">🏭<h4>Manufacturing</h4></div>
     </div>
   </div>
 </section>
@@ -475,7 +462,7 @@
   text-align:center;
   font-size:2.6rem;
   margin-bottom:60px;
-  color: #38bdf8;
+  color:#38bdf8;
 }
 .testi-grid{
   max-width:1000px;
@@ -488,38 +475,21 @@
   background:#020617;
   padding:30px;
   border-radius:18px;
-  position:relative;
-  opacity:0;
-  transform:scale(.9);
-  transition:.5s;
-}
-.testi.active{
-  opacity:1;
-  transform:scale(1);
 }
 .testi p{color:#cbd5f5}
 .testi h4{margin-top:15px;color:#38bdf8}
 </style>
 
 <section class="testimonials">
-  <h2>What Our Clients Say</h2>
+  <h2 class="reveal">What Our Clients Say</h2>
   <div class="testi-grid">
-    <div class="testi reveal-scale">
-      <p>“Outstanding IT support and fast delivery.”</p>
-      <h4>— Enterprise Client</h4>
-    </div>
-    <div class="testi reveal-scale">
-      <p>“Secure, scalable and reliable solutions.”</p>
-      <h4>— Startup Founder</h4>
-    </div>
-    <div class="testi reveal-scale">
-      <p>“Perfect partner for digital transformation.”</p>
-      <h4>— CTO</h4>
-    </div>
+    <div class="testi reveal-scale"><p>“Outstanding IT support and fast delivery.”</p><h4>— Enterprise Client</h4></div>
+    <div class="testi reveal-scale"><p>“Secure, scalable and reliable solutions.”</p><h4>— Startup Founder</h4></div>
+    <div class="testi reveal-scale"><p>“Perfect partner for digital transformation.”</p><h4>— CTO</h4></div>
   </div>
 </section>
 
-<!-- ========== SUPPORT STRIP PARALLAX ========== -->
+<!-- ========== SUPPORT STRIP ========== -->
 <style>
 .support-strip{
   min-height:70vh;
@@ -529,6 +499,7 @@
   display:flex;
   align-items:center;
   text-align:center;
+  color:#fff;
 }
 .support-box{
   max-width:800px;
@@ -542,29 +513,25 @@
 </style>
 
 <section class="support-strip">
-  <div class="support-box">
+  <div class="support-box zoom-out">
     <h2>24/7 Monitoring & Support</h2>
     <p>We ensure continuous uptime, proactive monitoring, and rapid incident response.</p>
   </div>
 </section>
 
+<!-- ========== SCRIPT (STAGGER SCROLL) ========== -->
 <script>
-/* REVEAL ANIMATIONS */
-const revealAll=document.querySelectorAll('.reveal,.reveal-scale');
-const io2=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(e.isIntersecting){
-      if(e.target.classList.contains('reveal-scale')){
-        e.target.classList.add('active');
-      }else{
-        e.target.style.opacity=1;
-        e.target.style.transform="translateY(0)";
-      }
-    }
-  })
+const els=document.querySelectorAll('.reveal,.reveal-scale,.zoom-out');
+const obs=new IntersectionObserver(entries=>{
+ entries.forEach((e,i)=>{
+  if(e.isIntersecting){
+    setTimeout(()=>e.target.classList.add('active'),i*120);
+  }
+ })
 },{threshold:.2});
-revealAll.forEach(el=>io2.observe(el));
+els.forEach(el=>obs.observe(el));
 </script>
+
 
 
 
